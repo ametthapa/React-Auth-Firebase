@@ -5,6 +5,8 @@ import { AuthProvider } from "./components/contexts/AuthContext";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Dashboard from "./components/Dashboard";
 import Login from "./components/Login";
+import PrivateRoute from "./components/PrivateRoute";
+import ForgotPassword from "./components/ForgotPassword";
 
 function App() {
   return (
@@ -16,9 +18,10 @@ function App() {
         <BrowserRouter>
           <AuthProvider>
             <Switch>
-              <Route path="/" exact component={Dashboard} />
+              <PrivateRoute path="/" exact component={Dashboard} />
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
+              <Route path="/forgot-password" component={ForgotPassword} />
             </Switch>
           </AuthProvider>
         </BrowserRouter>
