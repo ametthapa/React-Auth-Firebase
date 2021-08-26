@@ -8,7 +8,7 @@ import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import ForgotPassword from "./components/ForgotPassword";
 import UpdateProfle from "./components/UpdateProfle";
-
+ 
 function App() {
   return (
     <Container
